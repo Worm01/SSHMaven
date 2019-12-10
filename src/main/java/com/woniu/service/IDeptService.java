@@ -9,5 +9,7 @@ public interface IDeptService {
 
 	void delete(Dept dept);
 	void update(Dept dept);
+
+	Dept findOne(Integer id);
 	List<Dept> findAll();
 }

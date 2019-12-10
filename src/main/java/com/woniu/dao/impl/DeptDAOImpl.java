@@ -30,11 +30,14 @@ public class DeptDAOImpl implements IDeptDAO {
 	public void update(Dept dept) {
 		sessionFactory.getCurrentSession().update(dept);
 	}
+	@Override
+	public Dept findOne(Integer id) {
+		// TODO Auto-generated method stub
+		return sessionFactory.getCurrentSession().get(Dept.class, id);
+	}
+
 	public List<Dept> findAll() {
 		List<Dept> list=sessionFactory.getCurrentSession().createQuery("from Dept").list();
 		return list;
 	}
-
-	
-
 }
