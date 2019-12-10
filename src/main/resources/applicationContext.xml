@@ -14,7 +14,7 @@
 	<context:component-scan base-package="com.woniu"></context:component-scan>
 	<!-- 配置数据源 -->
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
-		<property name="url" value="jdbc:mysql://localhost:3306/maven?characterEncoding=utf8"></property>
+		<property name="url" value="jdbc:mysql://192.168.9.190:3306/maven?characterEncoding=utf8"></property>
 		<property name="username" value="root"></property>
 		<property name="password" value="root"></property>
 	</bean>
