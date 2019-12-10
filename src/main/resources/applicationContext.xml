@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+	<!-- 自动扫描 -->
+	<context:component-scan base-package="com.woniu"></context:component-scan>
+	<!-- 配置数据源 -->
+	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+		<property name="url" value="jdbc:mysql://localhost:3306/maven?characterEncoding=utf8"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="root"></property>
+	</bean>
+	<!-- 配置SessionFactory -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<!-- 将数据源注入SessionFactory -->
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="show_sql">true</prop>
+				<prop key="format_sql">true</prop>
+				<prop key="dialect">org.hibernate.dialect.MySQLDialect</prop>
+			</props>
+		</property>
+		<property name="mappingResources" value="com/woniu/pojo/Dept.hbm.xml"></property>
+	</bean>
+	<!-- 事务管理器 -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+		<!-- 将SessionFactory注入事务 -->
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<!-- 声明事务 -->
+	<tx:annotation-driven/>
+	<!-- <bean id="deptDao" class="com.woniu.dao.impl.DeptDAOImpl"></bean>
+	<bean id="deptService" class="com.woniu.service.impl.DeptServiceImpl" autowire="byType"></bean>	
+	<bean id="deptAction" class="com.woniu.action.DeptAction" autowire="byType" scope="prototype"></bean>
+	<bean id="aop" class="com.woniu.aop.SpringAOP"></bean>
+	<aop:config>
+		<aop:aspect ref="aop">
+			<aop:pointcut expression="execution(* com.woniu.service.impl.*.*(..))" id="point"/>
+			<aop:around method="round" pointcut-ref="point"/>
+		</aop:aspect>
+	</aop:config> -->
+</beans>
