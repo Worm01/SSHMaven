@@ -36,5 +36,4 @@ public class DeptAction {
 		ds.save(dept);
 		return "success";
 	}
-	
 }
