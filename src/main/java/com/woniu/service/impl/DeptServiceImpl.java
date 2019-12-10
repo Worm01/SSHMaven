@@ -30,9 +30,15 @@ public class DeptServiceImpl implements IDeptService{
 	}
 
 	@Override
+
 	public Dept findOne(Integer id) {
 		// TODO Auto-generated method stub
 		return ddao.findOne(id);
+	}
+	public List<Dept> findAll() {
+		List<Dept> list=ddao.findAll();
+		return list;
+
 	}
 
 	

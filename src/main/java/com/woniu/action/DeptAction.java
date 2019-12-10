@@ -38,7 +38,12 @@ public class DeptAction {
 	}
 
 	public String findOne(Dept dept) {
-		Dept Deptone= ds.findOne(dept.getDeptno());
+		Dept Deptone=ds.findOne(dept.getDeptno());
 		return "success";
 	}
+	public String findAll() {
+		list=ds.findAll();
+		return "success";
+	}
+	
 }

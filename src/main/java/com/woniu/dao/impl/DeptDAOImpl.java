@@ -28,4 +28,9 @@ public class DeptDAOImpl implements IDeptDAO {
 		// TODO Auto-generated method stub
 		return sessionFactory.getCurrentSession().get(Dept.class, id);
 	}
+
+	public List<Dept> findAll() {
+		List<Dept> list=sessionFactory.getCurrentSession().createQuery("from Dept").list();
+		return list;
+	}
 }
