@@ -37,4 +37,9 @@ public class Dept implements java.io.Serializable {
 		this.deptname = deptname;
 	}
 
+	@Override
+	public String toString() {
+		return "Dept [deptno=" + deptno + ", deptname=" + deptname + "]";
+	}
+
 }

@@ -7,11 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="${dept==null?'deptSave':'deptUpdate'}.action" method="post">
-	deptno:<input type="text" name="dept.deptno" value="${dept.deptno }"/><br>
-	deptname:<input type="text" name="dept.deptname" value="${dept.deptname }"><br>
-	<input type="submit" value="${dept==null?'增加':'修改' }">
-
+<form action="${Deptone==null?'deptSave':'deptUpdate'}.action" method="post">
+	deptno:<input type="text" name="dept.deptno" value="${Deptone.deptno }"/><br>
+	deptname:<input type="text" name="dept.deptname" value="${Deptone.deptname}"><br>
+	<input type="submit" value="${Deptone==null?'增加':'修改' }">
 </form>
 </body>
 </html>

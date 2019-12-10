@@ -31,9 +31,9 @@ public class DeptDAOImpl implements IDeptDAO {
 		sessionFactory.getCurrentSession().update(dept);
 	}
 	@Override
-	public Dept findOne(Integer id) {
+	public Dept findOne(Dept dept) {
 		// TODO Auto-generated method stub
-		return sessionFactory.getCurrentSession().get(Dept.class, id);
+		return sessionFactory.getCurrentSession().get(Dept.class, dept.getDeptno());
 	}
 
 	public List<Dept> findAll() {

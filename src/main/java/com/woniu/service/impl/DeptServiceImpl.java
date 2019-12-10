@@ -38,9 +38,9 @@ public class DeptServiceImpl implements IDeptService{
 		ddao.update(dept);
 	}
 
-	public Dept findOne(Integer id) {
+	public Dept findOne(Dept dept) {
 		// TODO Auto-generated method stub
-		return ddao.findOne(id);
+		return ddao.findOne(dept);
 	}
 	public List<Dept> findAll() {
 		List<Dept> list=ddao.findAll();

@@ -14,6 +14,7 @@ import com.woniu.service.IDeptService;
 public class DeptAction {
 	private List<Dept> list=new ArrayList<Dept>();
 	private Dept dept;
+
 	@Autowired
 	private IDeptService ds;
 	
@@ -45,8 +46,8 @@ public class DeptAction {
 		return "success";
 	}
 
-	public String findOne(Dept dept) {
-		Dept Deptone=ds.findOne(dept.getDeptno());
+	public String findOne() {
+		dept=ds.findOne(dept);
 		return "success";
 	}
 	

@@ -9,6 +9,6 @@ public interface IDeptDAO {
 	void delete(Dept dept);
 	void update(Dept dept);
 	void save(Dept dept);
-	Dept findOne(Integer id);
+	Dept findOne(Dept dept);
 	List<Dept> findAll();
 }
