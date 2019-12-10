@@ -36,5 +36,12 @@ public class DeptAction {
 		ds.save(dept);
 		return "success";
 	}
-	
+	public String delete() {
+		ds.delete(dept);
+		return "success";
+	}
+	public String update() {
+		ds.update(dept);
+		return "success";
+	}
 }

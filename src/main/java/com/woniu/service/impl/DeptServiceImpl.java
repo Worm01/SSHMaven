@@ -29,6 +29,15 @@ public class DeptServiceImpl implements IDeptService{
 		ddao.save(dept);
 	}
 
+	@Override
+	public void delete(Dept dept) {
+		ddao.delete(dept);
+	}
+	@Override
+	public void update(Dept dept) {
+		ddao.update(dept);
+	}
+
 	
 
 }

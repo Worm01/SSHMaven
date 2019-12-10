@@ -20,9 +20,14 @@ public class DeptDAOImpl implements IDeptDAO {
 	@Override
 	public void save(Dept dept) {
 		sessionFactory.getCurrentSession().save(dept);
-
 	}
 
-	
-
+	@Override
+	public void delete(Dept dept) {
+		sessionFactory.getCurrentSession().delete(dept);
+	}
+	@Override
+	public void update(Dept dept) {
+		sessionFactory.getCurrentSession().update(dept);
+	}
 }

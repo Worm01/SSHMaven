@@ -6,5 +6,6 @@ import com.woniu.pojo.Dept;
 
 public interface IDeptDAO {
 	void save(Dept dept);
-	
+	void delete(Dept dept);
+	void update(Dept dept);
 }
