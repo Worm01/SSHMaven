@@ -29,6 +29,12 @@ public class DeptServiceImpl implements IDeptService{
 		ddao.save(dept);
 	}
 
+	@Override
+	public List<Dept> findAll() {
+		List<Dept> list=ddao.findAll();
+		return list;
+	}
+
 	
 
 }

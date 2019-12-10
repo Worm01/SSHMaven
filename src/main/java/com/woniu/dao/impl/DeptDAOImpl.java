@@ -23,6 +23,12 @@ public class DeptDAOImpl implements IDeptDAO {
 
 	}
 
+	@Override
+	public List<Dept> findAll() {
+		List<Dept> list=sessionFactory.getCurrentSession().createQuery("from Dept").list();
+		return list;
+	}
+
 	
 
 }
