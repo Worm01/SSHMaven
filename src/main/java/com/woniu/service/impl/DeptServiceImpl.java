@@ -29,6 +29,12 @@ public class DeptServiceImpl implements IDeptService{
 		ddao.save(dept);
 	}
 
+	@Override
+	public Dept findOne(Integer id) {
+		// TODO Auto-generated method stub
+		return ddao.findOne(id);
+	}
+
 	
 
 }

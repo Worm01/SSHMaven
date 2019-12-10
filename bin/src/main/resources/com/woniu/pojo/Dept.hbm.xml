@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<<<<<<< HEAD
 <!-- Generated 2019-11-22 15:18:30 by Hibernate Tools 5.1.10.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-=======
-<!-- Generated 2019-11-25 11:05:10 by Hibernate Tools 5.1.10.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
->>>>>>> refs/heads/yu
 <hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
     <class catalog="maven" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.woniu.pojo.Dept" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="dept">
         <id name="deptno" type="int">

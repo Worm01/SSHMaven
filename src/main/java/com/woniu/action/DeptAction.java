@@ -36,4 +36,9 @@ public class DeptAction {
 		ds.save(dept);
 		return "success";
 	}
+
+	public String findOne(Dept dept) {
+		Dept Deptone= ds.findOne(dept.getDeptno());
+		return "success";
+	}
 }
