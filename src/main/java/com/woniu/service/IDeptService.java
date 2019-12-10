@@ -6,5 +6,5 @@ import com.woniu.pojo.Dept;
 
 public interface IDeptService {
 	void save(Dept dept);
-	
+	Dept findOne(Integer id);
 }

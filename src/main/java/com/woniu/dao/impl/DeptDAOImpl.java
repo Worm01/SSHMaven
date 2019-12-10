@@ -23,6 +23,12 @@ public class DeptDAOImpl implements IDeptDAO {
 
 	}
 
+	@Override
+	public Dept findOne(Integer id) {
+		// TODO Auto-generated method stub
+		return sessionFactory.getCurrentSession().get(Dept.class, id);
+	}
+
 	
 
 }
