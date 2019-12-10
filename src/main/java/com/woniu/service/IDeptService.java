@@ -6,6 +6,8 @@ import com.woniu.pojo.Dept;
 
 public interface IDeptService {
 	void save(Dept dept);
+
 	void delete(Dept dept);
 	void update(Dept dept);
+	List<Dept> findAll();
 }

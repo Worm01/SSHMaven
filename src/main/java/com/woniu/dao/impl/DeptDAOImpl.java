@@ -30,4 +30,11 @@ public class DeptDAOImpl implements IDeptDAO {
 	public void update(Dept dept) {
 		sessionFactory.getCurrentSession().update(dept);
 	}
+	public List<Dept> findAll() {
+		List<Dept> list=sessionFactory.getCurrentSession().createQuery("from Dept").list();
+		return list;
+	}
+
+	
+
 }

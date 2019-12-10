@@ -44,4 +44,9 @@ public class DeptAction {
 		ds.update(dept);
 		return "success";
 	}
+	public String findAll() {
+		list=ds.findAll();
+		return "success";
+	}
+	
 }

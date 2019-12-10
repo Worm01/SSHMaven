@@ -37,6 +37,10 @@ public class DeptServiceImpl implements IDeptService{
 	public void update(Dept dept) {
 		ddao.update(dept);
 	}
+	public List<Dept> findAll() {
+		List<Dept> list=ddao.findAll();
+		return list;
+	}
 
 	
 
